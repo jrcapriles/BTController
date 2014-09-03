@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BTController</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">BTControllerActivity</string>
+    <string name="forward">FW</string>
+    <string name="backward">BW</string>
+    <string name="clockwise">CW</string>
+    <string name="counter_clockwise">CCW</string>
+    <string name="stop">STOP</string>
+    <string name="left">LEFT</string>
+    <string name="right">RIGHT</string>
+
+    <string name="hello">Hello World, main!</string>
+
+    <string name="action_connect">Connect bluetooth</string>
+    <string name="action_discover">Find devices</string>
+
+
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="red">#d00000</color>
+    <color name="green">#00ff00</color>
+    <color name="blue">#0000ff</color>
+
+
+
+</resources>
