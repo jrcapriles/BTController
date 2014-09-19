@@ -75,6 +75,17 @@
             android:gravity="center">
 
             <ImageButton
+                android:layout_weight="0"
+                android:id="@+id/ck"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:scaleType="fitCenter"
+                android:text="@string/clockwise"
+                android:background="@color/white"
+                android:src="@drawable/cw_icon_"
+                android:onClick="sendMessage"/>
+
+            <ImageButton
                 android:id="@+id/backward"
                 android:layout_height="73dp"
                 android:layout_width="60dp"
@@ -82,11 +93,86 @@
                 android:text="@string/backward"
                 android:src="@drawable/down"
                 android:onClick="sendMessage"/>
+
+            <ImageButton
+                android:layout_weight="0"
+                android:id="@+id/cck"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:scaleType="fitCenter"
+                android:text="@string/counter_clockwise"
+                android:background="@color/white"
+                android:src="@drawable/ccw_icon_"
+                android:onClick="sendMessage"/>
         </TableRow>
 
     </TableLayout>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:att="http://schemas.android.com/apk/res/com.att.control"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/refresh_match_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Head Orientation"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <SeekBar
+                android:id="@+id/head_pan_bar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:max="180"
+                android:progress="90"
+                android:progressDrawable="@drawable/progressbar"
+                android:secondaryProgress="0" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:weightSum="4" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="left"
+                    android:text="-90"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="right"
+                    android:text="90"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+    <!--LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -119,4 +205,4 @@
             android:onClick="sendMessage"/>
     </LinearLayout>
 
-</LinearLayout>
+</LinearLayout-->
